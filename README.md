@@ -1,7 +1,7 @@
 # formlyMaterial
 Wieldo formly Material to build forms with angular-formly and angular material design
 
-I continue  
+I continue work on 
 
 https://github.com/formly-js/angular-formly-templates-material - angular-formly-templates-material  
 
