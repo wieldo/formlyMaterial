@@ -24,8 +24,7 @@
     "angular-material": "^1.1.0-rc.5",
     "angular-messages": "^1.5.7",
     "api-check": "^7.5.5",
-    "underscore": "^1.8.3",
-    "babel-polyfill": "^6.9.1"
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "argv-set-env": "^1.0.1",
@@ -39,9 +38,7 @@
     "jquery": "^3.0.0",
     "lodash": "^4.13.1",
     "sass-loader": "^4.0.0",
-    "style-loader": "^0.13.1"
-  },
-  "peerDependencies": {
+    "style-loader": "^0.13.1",
     "node-sass": "^3.8.0",
     "webpack": "^1.13.1"
   },
