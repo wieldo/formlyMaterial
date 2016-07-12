@@ -6,7 +6,7 @@
   "contributors": [
     "Ścibor Rudnicki <scibor.rudnicki@ster-project.com>"
   ],
-  "main": "dist/wieldo-formly-material.min.js",
+  "main": "dist/wieldo-formly-material.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wieldo/formlyMaterial.git"
