@@ -1,0 +1,10 @@
+<md-select ng-model="model[options.key]">
+      <md-optgroup label="{{group.label}}" ng-if="to.groups" ng-repeat="group in to.groups ">
+            <md-option ng-value="option.ngValue" ng-repeat="option in group.options">
+                  {{option.name}}
+            </md-option>
+      </md-optgroup>
+      <md-option ng-if="!to.groups" ng-repeat="option in to.options" ng-disabled="option.disabled" ng-value="option.ngValue">
+            {{option.name}}
+      </md-option>
+</md-select>

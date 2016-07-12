@@ -1,0 +1,5 @@
+<md-radio-group ng-model="model[options.key]" md-theme="{{to.theme}}">
+    <md-radio-button ng-repeat="option in to.options" class="{{option.className}}" ng-class="option.ngClass(option)" ng-value="option.ngValue" ng-disabled="option.ngDisabled" aria-label="{{option.ariaLabel}}">
+        {{option.label}}
+    </md-radio-button>
+</md-radio-group>
