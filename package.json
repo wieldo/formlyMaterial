@@ -6,15 +6,21 @@
   "contributors": [
     "Ścibor Rudnicki <scibor.rudnicki@ster-project.com>"
   ],
-  "main": "dist/wieldo-formly-material.js",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "main": "./lib/wieldo-formly-material.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wieldo/formlyMaterial.git"
   },
   "scripts": {
-    "build:dev": "webpack --progress --set-env-NODE_ENV=development",
-    "build:prod": "webpack --progress --set-env-NODE_ENV=production",
-    "build": "npm run build:prod && npm run build:dev"
+    "build:dev": "webpack --config tools/webpack.config.js --progress --set-env-NODE_ENV=dev",
+    "build:prod": "webpack --config tools/webpack.config.js --progress --set-env-NODE_ENV=prod",
+    "build": "npm run build:prod && npm run build:dev",
+    "build:babel": "./node_modules/.bin/babel --presets es2015 -d lib/ src/"
   },
   "dependencies": {
     "angular": "^1.5.7",
@@ -23,8 +29,7 @@
     "angular-formly": "^8.2.1",
     "angular-material": "^1.1.0-rc.5",
     "angular-messages": "^1.5.7",
-    "api-check": "^7.5.5",
-    "underscore": "^1.8.3"
+    "api-check": "^7.5.5"
   },
   "devDependencies": {
     "argv-set-env": "^1.0.1",
@@ -34,16 +39,15 @@
     "babel-preset-es2015": "^6.9.0",
     "css-loader": "^0.23.1",
     "eslint": "^2.13.1",
+    "eslint-loader": "^1.4.1",
     "html-loader": "^0.4.3",
     "jquery": "^3.0.0",
     "lodash": "^4.13.1",
+    "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "node-sass": "^3.8.0",
     "webpack": "^1.13.1"
   },
-  "private": false,
-  "analyze": true,
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wieldo/formlyMaterial/issues"
