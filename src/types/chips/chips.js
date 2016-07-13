@@ -1,8 +1,8 @@
-import templateUrl from "./view.html";
+import template from "./view.html";
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: "chips",
-        templateUrl: templateUrl,
+        template: template,
         wrapper: ["descriptionWrapper","messagesWrapper"],
         defaultOptions: {
             defaultValue: [],

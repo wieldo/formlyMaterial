@@ -1,8 +1,8 @@
-import templateUrl from "./view.html";
+import template from "./view.html";
 import addCheckedClassName from "../../helpers/add-checked-classname";
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
-        templateUrl: templateUrl,
+        template: template,
         name: "checkbox",
         defaultOptions: {
             defaultValue: false, // because model is available when value is set TODO: set defaultValue as ngFalseValue

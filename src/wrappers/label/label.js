@@ -1,7 +1,7 @@
-import templateUrl from "./view";
+import template from "./view.html";
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setWrapper({
         name: "labelWrapper",
-        templateUrl: templateUrl
+        template: template
     });
 };

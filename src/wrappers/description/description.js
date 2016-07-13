@@ -1,8 +1,8 @@
-import templateUrl from "./view";
+import template from "./view.html";
 import "./style.scss";
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setWrapper({
         name: "descriptionWrapper",
-        templateUrl: templateUrl
+        template: template
     });
 };

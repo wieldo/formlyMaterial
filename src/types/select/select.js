@@ -1,7 +1,7 @@
-import templateUrl from "./view.html";
+import template from "./view.html";
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
-        templateUrl: templateUrl,
+        template: template,
         name: "select",
         wrapper: ["labelWrapper","messagesWrapper","inputWrapper"],
         defaultOptions: {

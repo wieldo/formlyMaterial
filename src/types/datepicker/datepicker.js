@@ -1,9 +1,9 @@
-import templateUrl from "./view";
+import template from "./view.html";
 import "./style.scss";
 export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: "datepicker",
-        templateUrl: templateUrl,
+        template: template,
         wrapper: ["descriptionWrapper","messagesWrapper"],
         defaultOptions: {
             templateOptions: {
