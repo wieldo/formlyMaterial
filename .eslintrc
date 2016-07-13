@@ -1,4 +1,6 @@
 {
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es6": true,
@@ -8,8 +10,6 @@
         "mongo": true,
         "jasmine": true
     },
-    "extends": "eslint:recommended",
-    "parser": "babel-eslint",
     "globals": {
       "inject": false,
       "angular2now": false
@@ -18,7 +18,7 @@
         "camelcase": 1,
         "semi": 1,
         "indent": [
-            "error",
+            2,
             4
         ],
         "no-console": 0
