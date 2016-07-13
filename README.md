@@ -20,7 +20,7 @@ https://github.com/Diabeu27/MeteorApp
 #### default  
 
 directive  | attribute | templateOptions
------------- | -------------
+------------ | ------------- | ------------
 aria-label || ariaLabel
 |class | className
 ng-class || ngClass
@@ -30,7 +30,7 @@ ng-disabled || ngDisabled
 #### input
 
 directive  | attribute | templateOptions
------------- | -------------
+------------ | ------------- | ------------
 |min| min
 |max| max
 |maxlength|maxlength
@@ -50,9 +50,9 @@ ng-pattern||ngPattern
 
 directive  |   templateOptions
 ------------ | -------------
-ng-change| ngChane
+ng-change | ngChane
 ng-checked | ngChecked
 ng-false-value | ngFalseValue
-md-indeterminate| mdIndeterminate (not work in this version md)
-md-no-ink| mdNoInk
-ng-true-value|ngTrueValue
+md-indeterminate | mdIndeterminate (not work in this version md)
+md-no-ink | mdNoInk
+ng-true-value |ngTrueValue
