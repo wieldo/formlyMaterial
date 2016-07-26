@@ -1,29 +1,21 @@
-import angular from "angular";
-
-// load
-import wrappers from "./wrappers";
-import types from "./types";
-
-import validationMessages from "./config/validation-messages";
-import defaultModelAttrs from "./config/default-model-attrs";
-import defaultApiCheck from "./config/default-api-check";
+import angular from "./helpers/angular-fix";
+// config
+import wrappers from "./config/wrappers";
+import types from "./config/types";
+import templateManipulator from "./config/template-manipulator";
+import customValidationMessages from "./config/custom-validation-messages";
+// run
+import validationMessages from "./run/validation-messages";
 
 const moduleName = "wieldoFormlyMaterial";
+export const wieldoFormlyMaterial = angular.module(moduleName, ["ngMessages", "ngMaterial", "formly"]);
 
-angular.module(moduleName, ["ngMessages", "ngMaterial", "formly"]).config(["formlyConfigProvider","formlyApiCheck", (formlyConfigProvider, formlyApiCheck) => {
-    var load = [wrappers, types];
+// set config
+wieldoFormlyMaterial.config(wrappers);
+wieldoFormlyMaterial.config(types);
+wieldoFormlyMaterial.config(templateManipulator);
+wieldoFormlyMaterial.factory("customValidationMessages", customValidationMessages);
+// run
+wieldoFormlyMaterial.run(validationMessages);
 
-    load.forEach((load) => {
-        for (let i = 0; i < load.length; i++) {
-            load[i](formlyConfigProvider);
-        }
-    });
-    formlyConfigProvider.templateManipulators.preWrapper.push((template, options) => {
-        defaultApiCheck(formlyApiCheck, options);
-        defaultModelAttrs(options);
-        return template;
-    });
-}]).run(["formlyValidationMessages",(formlyValidationMessages) => {
-    validationMessages(formlyValidationMessages);
-}]);
 export default moduleName;
