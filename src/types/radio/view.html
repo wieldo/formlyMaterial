@@ -1,5 +1,10 @@
-<md-radio-group ng-model="model[options.key]" md-theme="{{to.theme}}">
-    <md-radio-button ng-repeat="option in to.options" class="{{option.className}}" ng-class="option.ngClass(option)" ng-value="option.ngValue" ng-disabled="option.ngDisabled" aria-label="{{option.ariaLabel}}">
-        {{option.label}}
+<md-radio-group ng-model="model[options.key]">
+    <md-radio-button
+        ng-repeat="option in to.options track by $index"
+        aria-label="{{to.options[$index].ariaLabel}}"
+        class="{{to.options[$index].className}}"
+        ng-disabled="(to.options[$index].disabled || to.options[$index].ngDisabled)"
+        ng-value="(to.options[$index].value || to.options[$index].ngValue)">
+        {{to.options[$index].label}}
     </md-radio-button>
 </md-radio-group>
