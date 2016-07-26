@@ -1,10 +1,28 @@
 <md-select ng-model="model[options.key]">
-      <md-optgroup label="{{group.label}}" ng-if="to.groups" ng-repeat="group in to.groups ">
-            <md-option ng-value="option.ngValue" ng-repeat="option in group.options">
-                  {{option.name}}
+      <md-optgroup
+            ng-if="to.options[0].label"
+            ng-repeat="($groupIndex, group) in to.options"
+            class="{{to.options[$groupIndex].className}}"
+            label="{{to.options[$groupIndex].label}}">
+            <md-option
+                  ng-repeat="($optionIndex, option) in group.options"
+                  class="{{to.options[$groupIndex].options[$optionIndex].className}}"
+                  ng-disabled="to.options[$groupIndex].options[$optionIndex].ngDisabled || to.options[$groupIndex].options[$optionIndex].disabled"
+                  ng-click="to.options[$groupIndex].options[$optionIndex].ngClick(options, model)"
+                  ng-class="to.options[$groupIndex].options[$optionIndex].ngClass(options, model)"
+                  ng-value="to.options[$groupIndex].options[$optionIndex].ngValue || to.options[$groupIndex].options[$optionIndex].value" >
+                  {{to.options[$groupIndex].options[$optionIndex].name}}
             </md-option>
       </md-optgroup>
-      <md-option ng-if="!to.groups" ng-repeat="option in to.options" ng-disabled="option.disabled" ng-value="option.ngValue">
-            {{option.name}}
+
+      <md-option
+            ng-if="!to.options[0].label"
+            ng-repeat="($index, option) in to.options"
+            class="{{to.options[$index].className}}"
+            ng-disabled="(to.options[$index].disabled || to.options[$index].ngDisabled)"
+            ng-class="to.options[$index].ngClass(options, model)"
+            ng-click="to.options[$index].ngClick(options, model)"
+            ng-value="(to.options[$index].ngValue || to.options[$index].value)">
+            {{to.options[$index].name}}
       </md-option>
 </md-select>
