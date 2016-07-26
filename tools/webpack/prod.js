@@ -4,8 +4,8 @@ module.exports = require('./common')({
     output: {
         filename: '[name].min.js'
     },
-    devtool: 'source-map',
+    devtool: 'source-map'/*,
     plugins: [
         new webpack.optimize.UglifyJsPlugin({ minimize: true })
-    ]
+    ]*/
 });
