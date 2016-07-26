@@ -1,4 +1,7 @@
 <label>
       {{to.label}}
+      <md-slider-value ng-if="to.showValue">
+          {{options.formControl.$modelValue}}
+      </md-slider-value>
 </label>
 <formly-transclude></formly-transclude>
