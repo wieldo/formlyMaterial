@@ -3,12 +3,10 @@ export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: "chips",
         template: template,
-        wrapper: ["descriptionWrapper","messagesWrapper"],
+        wrapper: ["descriptionWrapper","messagesWrapper","labelWrapper"],
         defaultOptions: {
             defaultValue: [],
-            templateOptions: {
-                disabled: false
-            },
+            templateOptions: {},
             ngModelAttrs: {
                 deleteButtonLabel: {
                     attribute: "delete-button-label"
@@ -32,7 +30,10 @@ export default (formlyConfigProvider) => {
                     bound: "md-separator-keys"
                 },
                 mdTransformChip: {
-                    attribute: "md-transform-chip"
+                    attribute: "md-transform-chip" // not tested
+                },
+                placeholder: {
+                    attribute: "placeholder"
                 },
                 readonly: {
                     attribute: "readonly"
@@ -47,8 +48,12 @@ export default (formlyConfigProvider) => {
                 deleteButtonLabel: check.string.optional,
                 deleteHint: check.string.optional,
                 mdOnAdd: check.func.optional,
+                mdOnRemove: check.func.optional,
                 mdOnSelect: check.func.optional,
+                mdRequireMatch: check.func.optional,
                 mdSeparatorKeys: check.array.optional,
+                mdTransformChip: check.string.optional, // not tested
+                placeholder: check.string.optional,
                 readonly: check.bool.optional,
                 secondaryPlaceholder: check.string.optional
             }
