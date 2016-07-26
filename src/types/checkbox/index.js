@@ -4,11 +4,10 @@ export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         template: template,
         name: "checkbox",
+        wrapper: ["descriptionWrapper","labelWrapper"],
         defaultOptions: {
             defaultValue: false, // because model is available when value is set TODO: set defaultValue as ngFalseValue
-            templateOptions: {
-                ngDisabled: false
-            },
+            templateOptions: {},
             // if hideExpression is set then it is not checked when appear
             expressionProperties: {
                 "templateOptions.className": ($viewValue, $modelValue, scope) => {
@@ -16,9 +15,6 @@ export default (formlyConfigProvider) => {
                 }
             },
             ngModelAttrs: {
-                ariaLabel: {
-                    attribute: "aria-label"
-                },
                 ngChange: {
                     attribute: "ng-change"
                 },
@@ -45,9 +41,7 @@ export default (formlyConfigProvider) => {
                 mdIndeterminate: check.func.optional,
                 mdNoInk: check.bool.optional,
                 ngChange: check.string.optional,
-                ngChecked: check.func.optional,
-                ngFalseValue: check.string.optional,
-                ngTrueValue: check.string.optional
+                ngChecked: check.func.optional
             }
         })
     });
