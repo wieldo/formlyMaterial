@@ -4,11 +4,9 @@ export default (formlyConfigProvider) => {
     formlyConfigProvider.setType({
         name: "datepicker",
         template: template,
-        wrapper: ["descriptionWrapper","messagesWrapper"],
+        wrapper: ["descriptionWrapper","messagesWrapper","labelWrapper"],
         defaultOptions: {
-            templateOptions: {
-                disabled: false
-            },
+            templateOptions: {},
             ngModelAttrs: {
                 mdDateFilter: {
                     bound: "md-date-filter"
