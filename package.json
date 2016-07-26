@@ -20,7 +20,7 @@
     "build:dev": "webpack --config tools/webpack.config.js --progress --set-env-NODE_ENV=dev",
     "build:prod": "webpack --config tools/webpack.config.js --progress --set-env-NODE_ENV=prod",
     "build": "npm run build:prod && npm run build:dev",
-    "build:babel": "./node_modules/.bin/babel --presets es2015 -d lib/ src/"
+    "build:babel": "./node_modules/.bin/babel --presets es2015 -d lib/ src/",
   },
   "dependencies": {
     "angular": "^1.5.7",
@@ -29,7 +29,8 @@
     "angular-formly": "^8.2.1",
     "angular-material": "^1.1.0-rc.5",
     "angular-messages": "^1.5.7",
-    "api-check": "^7.5.5"
+    "api-check": "^7.5.5",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "argv-set-env": "^1.0.1",
