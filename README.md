@@ -14,7 +14,7 @@ https://www.npmjs.com/package/wieldoformlymaterial
 
 
 ### Demo -- in progress
-https://github.com/Diabeu27/MeteorApp
+https://github.com/wieldo/meteor-app
 
 ### You can generate by json formly Types
 - [x] Checkbox
