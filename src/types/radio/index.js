@@ -5,25 +5,16 @@ export default (formlyConfigProvider) => {
         name: "radio",
         wrapper: ["descriptionWrapper","labelWrapper"],
         defaultOptions: {
-            templateOptions: {},
+            templateOptions: {
+                disabled: false,
+                ngDisabled: false
+            },
             ngModelAttrs: {
                 mdNoInk: {
                     attribute: "md-no-ink"
                 },
                 ngChange: {
                     bound: "ng-change"
-                }
-            },
-            expressionProperties: {
-                "templateOptions.ngDisabled": ($viewValue, $modelValue, scope) => {
-                    if (scope.options.templateOptions.disabled !== undefined) {
-                        if (scope.options.templateOptions.options) {
-                            _.each(scope.options.templateOptions.options,(option) => {
-                                option['disabled'] = scope.options.templateOptions.disabled;
-                            });
-                        }
-                        return scope.options.templateOptions.disabled;
-                    }
                 }
             }
         },
