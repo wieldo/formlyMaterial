@@ -2,6 +2,7 @@
 # formlyMaterial
 
 [![GitHub version](https://badge.fury.io/gh/wieldo%2FformlyMaterial.svg)](https://badge.fury.io/gh/wieldo%2FformlyMaterial)
+[![Build Status](https://travis-ci.org/wieldo/formlyMaterial.svg?branch=master)](https://travis-ci.org/wieldo/formlyMaterial)
 
 Wieldo formly Material to build forms with angular-formly and angular material design
 
