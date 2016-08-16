@@ -22,8 +22,13 @@ npm install wieldoformlymaterial
 https://www.npmjs.com/package/wieldoformlymaterial
 
 
-### Demo -- in progress
+### Demo
+##### github
 https://github.com/wieldo/meteor-app
+##### real example
+http://meteor-app.wieldo.com/signup/ - after signup go to http://meteor-app.wieldo.com/developers/forms
+
+
 
 ### You can generate by json formly Types
 - [x] Checkbox
