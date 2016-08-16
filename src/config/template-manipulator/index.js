@@ -7,8 +7,8 @@ export default (formlyConfigProvider, formlyApiCheck) => {
         defaultModelAttrs(options);
         return template;
     });
-    formlyConfigProvider.templateManipulators.postWrapper.push((template, options/*, scope*/) => {
-        template = addAttrBySpecifiedQuery(template, options); // because wrappers are added
+    formlyConfigProvider.templateManipulators.postWrapper.push((template, options, scope) => {
+        template = addAttrBySpecifiedQuery(template, options, scope); // because wrappers are added
         return template;
     });
 };
