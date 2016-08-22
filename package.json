@@ -21,7 +21,6 @@
     "build:prod": "webpack --config tools/webpack.config.js --progress --set-env-NODE_ENV=prod",
     "build:test": "webpack --config tools/webpack.config.js --progress --set-env-NODE_ENV=test",
     "build": "npm run build:prod && npm run build:dev",
-    "build:babel": "babel --presets es2015 -d lib/ src/",
     "karma:test": "./node_modules/karma/bin/karma start"
   },
   "dependencies": {
