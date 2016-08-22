@@ -21,6 +21,9 @@ export default (formlyConfigProvider) => {
                 ngPattern: {
                     attribute: "ng-pattern"
                 },
+                ngRequired: {
+                    attribute: "ng-required"
+                },
                 pattern: {
                     attribute: "ng-pattern"
                 },
