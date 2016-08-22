@@ -23,11 +23,8 @@ https://www.npmjs.com/package/wieldoformlymaterial
 
 
 ### Demo
-##### github
-https://github.com/wieldo/meteor-app
-##### real example
-http://meteor-app.wieldo.com/signup/ - after signup go to http://meteor-app.wieldo.com/developers/forms
-
+**github** - https://github.com/wieldo/meteor-app   
+**real example** - http://meteor-app.wieldo.com/developers/forms
 
 
 ### You can generate by json formly Types
@@ -46,19 +43,37 @@ Custom
 - [x] Select Month
 - [x] Select Year
 
-### templateOptions
-#### default  
+## Tests
+Karma Jasmine - http://jasmine.github.io/2.0/introduction.html
+- [x] Checkbox
+- [x] Chips
+- [ ] Datepicker
+- [ ] Input
+- [ ] Radio
+- [ ] Select
+- [ ] Slider
+- [ ] Switch
+- [ ] Textarea
 
-directive | attribute | type | templateOptions | apiCheck
---------- | --------- | ---- |---------------- | --------
-aria-label || String | ariaLabel | string.optional
-|class | String |className | string.optional
-|| Boolean | disabled | bool.optional
-md-theme || String | theme | string.optional
-ng-class || Function | ngClass | func.optional
-ng-click || Function | ngClick | func.optional
-ng-disabled || Boolean | ngDisabled | bool.optional
-md-theme || String | mdTheme | string.optional
+Custom
+- [ ] Select Day
+- [ ] Select Month
+- [ ] Select Year
+
+
+### templateOptions
+**default**
+
+templateOptions | directive | attribute | type | apiCheck
+--------------- | --------- | --------- | ---- |--------
+ ariaLabel | aria-label || String |string.optional
+className | |class | String |string.optional
+ disabled | || Boolean |bool.optional
+ theme | md-theme || String |string.optional
+ ngClass | ng-class || Function |func.optional
+ ngClick | ng-click || Function |func.optional
+ ngDisabled | ng-disabled || Boolean |bool.optional
+ mdTheme | md-theme || String |string.optional
 
 [Click](https://github.com/wieldo/formlyMaterial/blob/master/HELP.md) here to go for more information about templateOptions
 
