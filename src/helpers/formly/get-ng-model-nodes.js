@@ -2,8 +2,8 @@ import angular from "./../angular-fix";
 import getNgModelNodesFallback from "./get-ng-model-nodes-fallback";
 // Utility functions
 export default (node, skip, query) => {
-    const selectorNot = angular.isString(skip) ? `:not(${skip})` : '';
-    const skipNot = ':not([formly-skip-ng-model-attrs-manipulator])';
+    const selectorNot = angular.isString(skip) ? `:not(${skip})` : "";
+    const skipNot = ":not([formly-skip-ng-model-attrs-manipulator])";
     if (!query)
         query = `[ng-model]${selectorNot}${skipNot}, [data-ng-model]${selectorNot}${skipNot}`;
     try {

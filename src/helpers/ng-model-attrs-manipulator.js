@@ -2,7 +2,7 @@ import angular from "./angular-fix";
 import getNgModelNodes from "./formly/get-ng-model-nodes";
 import addIfNotPresent from "./formly/add-if-not-present";
 export default (template, options, attrName, attrValue, query) => {
-    const node = document.createElement('div');
+    const node = document.createElement("div");
     const skip = options.extras && options.extras.skipNgModelAttrsManipulator;
     if (skip === true) {
         return template;
