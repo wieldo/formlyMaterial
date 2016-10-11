@@ -1,0 +1,10 @@
+<md-list>
+    <md-list-item ng-repeat="item in to.mdListItem track by $index">
+        <p> {{to.mdListItem[$index].name}} </p>
+        <md-checkbox
+            class="md-secondary"
+            ng-class="to.mdListItem[$index].className || to.className"
+            ng-model="model[options.key][item.modelName]"
+            ></md-checkbox>
+    </md-list-item>
+</md-list>

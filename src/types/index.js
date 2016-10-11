@@ -1,4 +1,5 @@
 import checkbox from "./checkbox";
+import checkboxMdList from "./checkbox/md-list";
 import chips from "./chips";
 import datepicker from "./datepicker";
 import input from "./input";
@@ -12,6 +13,7 @@ import $switch from "./switch";
 import textarea from "./textarea";
 export default [
     checkbox,
+    checkboxMdList,
     chips,
     datepicker,
     input,
