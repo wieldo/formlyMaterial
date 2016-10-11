@@ -30,8 +30,7 @@ export default (formlyConfigProvider) => {
                 mdContainerClass: check.string.optional,
                 mdOnOpen: check.func.optional,
                 mdOnClose: check.func.optional,
-                options: check.arrayOf(check.object).optional,
-                required: check.bool.optional
+                options: check.arrayOf(check.object).optional
             }
         })
     });
