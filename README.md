@@ -1,5 +1,9 @@
 
-# formlyMaterial
+# DEPRECATED
+
+Working on version for Angular 4+ here [@ngx-form](https://github.com/ngx-form)
+
+## formlyMaterial
 
 [![GitHub version](https://badge.fury.io/gh/wieldo%2FformlyMaterial.svg)](https://badge.fury.io/gh/wieldo%2FformlyMaterial)
 [![Build Status](https://travis-ci.org/wieldo/formlyMaterial.svg?branch=master)](https://travis-ci.org/wieldo/formlyMaterial)
